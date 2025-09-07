@@ -22,6 +22,10 @@ public class Sellet implements Serializable {
         this.birthDate = birthDate;
     }
 
+    public Sellet() {
+
+    }
+
     public int getId() {
         return id;
     }
