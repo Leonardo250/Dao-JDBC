@@ -1,12 +1,16 @@
 package application;
 
 import model.entities.Department;
+import model.entities.Sellet;
+
+import java.util.Date;
 
 public class Program {
     public static void main(String[] args){
 
         Department obj = new Department(1,"books");
-        System.out.println(obj);
+        Sellet seller = new Sellet(21,"bob","bob@gmail.com",300000.0, obj,new Date());
+        System.out.println(seller);
 
     }
 }
