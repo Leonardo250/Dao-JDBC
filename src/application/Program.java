@@ -23,5 +23,11 @@ public class Program {
         for(Sellet obj : list){
             System.out.printf(String.valueOf(obj));
         }
+
+        System.out.println("TESTE 3: seller findAll");
+        list = selletDao.findAll();
+        for(Sellet obj : list){
+            System.out.printf(String.valueOf(obj));
+        }
     }
 }
