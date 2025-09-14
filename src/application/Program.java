@@ -7,10 +7,11 @@ import model.entities.Sellet;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Scanner;
 
 public class Program {
     public static void main(String[] args){
-
+        Scanner sc = new Scanner(System.in);
         SelletDao selletDao = DaoFactory.createSellerDao();
 
         System.out.println("TESTE 1: seler finfById");
@@ -40,5 +41,12 @@ public class Program {
         seller.setName("bob rod");
         selletDao.update(seller);
         System.out.println("atualizado");
+
+        System.out.println("TESTE 6: Delete");
+        System.out.println("Entre com Id: ");
+        int id = sc.nextInt();
+        selletDao.DeleteById(id);
+        System.out.println("Deletado");
+        sc.close();
     }
 }
