@@ -34,5 +34,11 @@ public class Program {
         Sellet newSeller = new Sellet(null,"greg","greg@email.com",4000.0,department,new Date());
         selletDao.insert(newSeller);
         System.out.println("Inserido novo id = " + newSeller.getId());
+
+        System.out.println("TESTE 5: update");
+        seller = selletDao.findById(1);
+        seller.setName("bob rod");
+        selletDao.update(seller);
+        System.out.println("atualizado");
     }
 }
