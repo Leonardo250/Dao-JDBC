@@ -29,5 +29,10 @@ public class Program {
         for(Sellet obj : list){
             System.out.printf(String.valueOf(obj));
         }
+
+        System.out.println("TESTE 4: inserção");
+        Sellet newSeller = new Sellet(null,"greg","greg@email.com",4000.0,department,new Date());
+        selletDao.insert(newSeller);
+        System.out.println("Inserido novo id = " + newSeller.getId());
     }
 }
